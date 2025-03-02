@@ -20,13 +20,13 @@ ifeq ($(COMPILE_PLATFORM),sunos)
 endif
 
 ifndef BUILD_STANDALONE
-  BUILD_STANDALONE =
+  BUILD_STANDALONE =1
 endif
 ifndef BUILD_CLIENT
   BUILD_CLIENT     =
 endif
 ifndef BUILD_SERVER
-  BUILD_SERVER     =
+  BUILD_SERVER     =0
 endif
 ifndef BUILD_GAME_SO
   BUILD_GAME_SO    =
@@ -38,13 +38,13 @@ ifndef BUILD_BASEGAME
   BUILD_BASEGAME =
 endif
 ifndef BUILD_MISSIONPACK
-  BUILD_MISSIONPACK=
+  BUILD_MISSIONPACK=0
 endif
 ifndef BUILD_RENDERER_OPENGL1
-  BUILD_RENDERER_OPENGL1=
+  BUILD_RENDERER_OPENGL1=1
 endif
 ifndef BUILD_RENDERER_OPENGL2
-  BUILD_RENDERER_OPENGL2=
+  BUILD_RENDERER_OPENGL2=1
 endif
 ifndef BUILD_AUTOUPDATER  # DON'T build unless you mean to!
   BUILD_AUTOUPDATER=0
@@ -120,11 +120,11 @@ endif
 export CROSS_COMPILING
 
 ifndef VERSION
-VERSION=1.36
+VERSION=0.01
 endif
 
 ifndef CLIENTBIN
-CLIENTBIN=ioquake3
+CLIENTBIN=misfortunegame
 endif
 
 ifndef SERVERBIN
@@ -132,7 +132,7 @@ SERVERBIN=ioq3ded
 endif
 
 ifndef BASEGAME
-BASEGAME=baseq3
+BASEGAME=serka
 endif
 
 ifndef BASEGAME_CFLAGS
@@ -148,7 +148,7 @@ MISSIONPACK_CFLAGS=-DMISSIONPACK
 endif
 
 ifndef COPYDIR
-COPYDIR="/usr/local/games/quake3"
+COPYDIR="/usr/local/games/misfortunegame"
 endif
 
 ifndef COPYBINDIR
@@ -208,7 +208,7 @@ USE_VOIP=1
 endif
 
 ifndef USE_FREETYPE
-USE_FREETYPE=0
+USE_FREETYPE=1
 endif
 
 ifndef USE_INTERNAL_LIBS
